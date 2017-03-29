@@ -5,6 +5,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.junit.Assert;
 
 /**
  * Created by sergey on 30/03/2017.
@@ -40,7 +41,6 @@ public class MyStepdefs {
 
     @Then("^The result should be (\\d+)$")
     public void theResultShouldBe(int expected) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        Assert.assertEquals(expected, this.result, 1e-5);
     }
 }
