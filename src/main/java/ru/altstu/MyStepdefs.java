@@ -12,7 +12,8 @@ import cucumber.api.java.en.When;
 public class MyStepdefs {
 
     private Calculator calc;
-
+    private double operand1;
+    private double operand2;
 
     @Given("^I have my software calculator$")
     public void iHaveMySoftwareCalculator() throws Throwable {
@@ -23,14 +24,12 @@ public class MyStepdefs {
 
     @When("^I have entered (\\d+) as first operand$")
     public void iHaveEnteredAsFirstOperand(int number) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        this.operand1 = number;
     }
 
     @And("^I have entered (\\d+) as second operand$")
     public void iHaveEnteredAsSecondOperand(int number) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+       this.operand2 = number;
     }
 
     @And("^I press 'Add'$")
