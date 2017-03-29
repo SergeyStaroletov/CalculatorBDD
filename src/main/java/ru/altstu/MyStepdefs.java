@@ -14,6 +14,7 @@ public class MyStepdefs {
     private Calculator calc;
     private double operand1;
     private double operand2;
+    private double result;
 
     @Given("^I have my software calculator$")
     public void iHaveMySoftwareCalculator() throws Throwable {
@@ -34,8 +35,7 @@ public class MyStepdefs {
 
     @And("^I press 'Add'$")
     public void iPressAdd() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        this.result = calc.add(operand1, operand2);
     }
 
     @Then("^The result should be (\\d+)$")
