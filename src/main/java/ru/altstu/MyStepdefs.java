@@ -10,10 +10,15 @@ import cucumber.api.java.en.When;
  * Created by sergey on 30/03/2017.
  */
 public class MyStepdefs {
+
+    private Calculator calc;
+
+
     @Given("^I have my software calculator$")
     public void iHaveMySoftwareCalculator() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+
+       this.calc = new Calculator();
+
     }
 
     @When("^I have entered (\\d+) as first operand$")
