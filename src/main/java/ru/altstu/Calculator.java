@@ -5,11 +5,10 @@ package ru.altstu;
  */
 public class Calculator {
     public double add(double operand1, double operand2) {
-        if (operand1 == 5 && operand2 == 10) return 15;
-        return 30;
+        return operand1+operand2;
     }
 
     public double multiply(double operand1, double operand2) {
-        return 50;
+        return operand1 * operand2;
     }
 }
