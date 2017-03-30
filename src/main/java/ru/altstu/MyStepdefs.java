@@ -20,7 +20,7 @@ public class MyStepdefs {
     @Given("^I have my software calculator$")
     public void iHaveMySoftwareCalculator() throws Throwable {
 
-       this.calc = new Calculator();
+        this.calc = new Calculator();
 
     }
 
@@ -31,7 +31,7 @@ public class MyStepdefs {
 
     @And("^I have entered (\\d+) as second operand$")
     public void iHaveEnteredAsSecondOperand(int number) throws Throwable {
-       this.operand2 = number;
+        this.operand2 = number;
     }
 
     @And("^I press 'Add'$")
@@ -42,5 +42,10 @@ public class MyStepdefs {
     @Then("^The result should be (\\d+)$")
     public void theResultShouldBe(int expected) throws Throwable {
         Assert.assertEquals(expected, this.result, 1e-5);
+    }
+
+    @And("^I press 'Multiply'$")
+    public void iPressMultiply() throws Throwable {
+        this.result = calc.multiply(operand1, operand2);
     }
 }
