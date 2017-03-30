@@ -16,3 +16,9 @@ Feature: Addition
     And I have entered 10 as second operand
     And I press 'Add'
     Then The result should be 15
+  Scenario:
+    Given I have my software calculator
+    When I have entered 5 as first operand
+    And I have entered 10 as second operand
+    And I press 'Multiply'
+    Then The result should be 50
